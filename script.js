@@ -21,6 +21,10 @@ function displayTable()
             choiceoffood.push(inputs[i].value);
         }
     }
+    if(choiceoffood.length<2)
+    {
+        alert("Please select atleast 2 foods")
+    }
     const state=document.getElementById('state').value;
     const country=document.getElementById('country').value;
     if(!!firstname && !!lastname && !!gender && !!address && !!pincode && !!choiceoffood && !!state && !!country)
@@ -34,7 +38,6 @@ function displayTable()
 }
 function appendDetails(firstname,lastname,gender,address,pincode,choiceoffood,state,country)
 {
-    
     document.getElementById('firstname').innerHTML=firstname;
     document.getElementById('lastname').innerHTML=lastname;
     document.getElementById('addressid').innerHTML=address;
